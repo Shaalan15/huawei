@@ -21,22 +21,22 @@ function App() {
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">Home</a>
+          <Link class="nav-link active" aria-current="page" to="/">Home</Link>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/productsketch">Product Sketch</a>
+          <Link class="nav-link" to="/productsketch">Product Sketch</Link>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/softwarediagram">Software Diagram</a>
+          <Link class="nav-link" to="/softwarediagram">Software Diagram</Link>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/marketdata">Market Data</a>
+          <Link class="nav-link" to="/marketdata">Market Data</Link>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/marketdata">Market Data</a>
+          <Link class="nav-link" to="/marketdata">Market Data</Link>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/demo">DEMO</a>
+          <Link class="nav-link" to="/demo">DEMO</Link>
         </li>
         {/*<li class="nav-item">
           <a class="nav-link" href="/login">Login</a>
