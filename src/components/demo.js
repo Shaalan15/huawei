@@ -1,23 +1,69 @@
-import React from 'react'
-import { FormControl, InputLabel, MenuItem, Select } from '@mui/material'
-import Dropdown from 'react-dropdown';
-import 'react-dropdown/style.css';
-import { handleBreakpoints } from '@mui/system';
+import {
+	LineChart,
+	ResponsiveContainer,
+	Legend, Tooltip,
+	Line,
+	XAxis,
+	YAxis,
+	CartesianGrid
+} from 'recharts';
 
-const options = [
-  'one', 'two', 'three'
+// Sample chart data
+const pdata = [
+	{
+		name: 'Worker 1',
+		temperature: 39,
+		productivity: 30
+	},
+	{
+		name: 'Worker 2',
+		temperature: 37,
+		productivity: 60
+	},
+	{
+		name: 'Worker 3',
+		temperature: 38,
+		productivity: 40
+	},
+	{
+		name: 'Worker 4',
+		temperature: 36.5,
+		productivity: 55
+	},
+	{
+		name: 'Worker 5',
+		temperature: 37,
+		productivity: 50
+	},
+	{
+		name: 'Worker 6',
+		temperature: 39,
+		productivity: 25
+	},
 ];
-const defaultOption = options[0];
 
-export default function demo() {
-    return (
-        <div>
-            <h1>Meow</h1>
-            <Dropdown options={options} onChange={handleChange} value={defaultOption} placeholder="Select an option" />
-        </div>
-    )
+function Demo() {
+	return (
+		<>
+			<h1 className="text-heading">
+				Average Temperature of Construction Workers
+			</h1>
+			<ResponsiveContainer width="100%" aspect={3}>
+				<LineChart data={pdata} margin={{ right: 300 }}>
+					<CartesianGrid />
+					<XAxis dataKey="name"
+						interval={'preserveStartEnd'} />
+					<YAxis></YAxis>
+					<Legend />
+					<Tooltip />
+					<Line dataKey="temperature"
+						stroke="black" activeDot={{ r: 8 }} />
+					<Line dataKey="productivity"
+						stroke="red" activeDot={{ r: 8 }} />
+				</LineChart>
+			</ResponsiveContainer>
+		</>
+	);
 }
 
-const handleChange = () => {
-    console.log("Changed!")
-}
+export default Demo;

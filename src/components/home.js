@@ -1,4 +1,6 @@
 import React from 'react'
+import { Wave } from 'react-animated-text';
+
 
 export default function home() {
     return (

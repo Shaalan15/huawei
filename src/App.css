@@ -40,3 +40,8 @@
     transform: rotate(360deg);
   }
 }
+
+.gridcenter{
+  position: relative;
+  align-self: center;
+}

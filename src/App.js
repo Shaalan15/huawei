@@ -7,7 +7,8 @@ import market from './components/market';
 import productsketch from './components/productsketch';
 import login from './components/login';
 import home from './components/home';
-import demo from './components/demo';
+import Demo from './components/demo';
+
 function App() {
   return (
     <Router>
@@ -33,9 +34,6 @@ function App() {
           <Link class="nav-link" to="/marketdata">Market Data</Link>
         </li>
         <li class="nav-item">
-          <Link class="nav-link" to="/marketdata">Market Data</Link>
-        </li>
-        <li class="nav-item">
           <Link class="nav-link" to="/demo">DEMO</Link>
         </li>
         {/*<li class="nav-item">
@@ -55,13 +53,14 @@ function App() {
     </div>
   </div>
 </nav>
+
           <Switch>
               <Route exact path='/' component={home} />
               <Route path='/productsketch' component={productsketch} />
               <Route path='/softwarediagram' component={softdiag} />
               <Route path='/marketdata' component={market} />
               <Route path='/login' component={login} />
-              <Route path='/demo' component={demo} />
+              <Route path='/demo' component={Demo} />
           </Switch>
     </div>
     </Router>
